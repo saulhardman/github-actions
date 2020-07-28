@@ -1,0 +1,12 @@
+name: Refresh Instagram Access Token
+description: Refreshes an Instagram access token
+inputs:
+  access_token:
+    description: An existing, valid Instagram access token
+    required: true
+outputs:
+  access_token:
+    description: The refreshed Instagram access token
+runs:
+  using: node12
+  main: index.cjs.js

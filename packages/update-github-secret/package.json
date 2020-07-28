@@ -1,0 +1,24 @@
+{
+  "name": "@saulhardman/update-github-secret",
+  "version": "0.0.0",
+  "description": "A GitHub Action to create or update a GitHub repository secret",
+  "author": "Saul Hardman <hello@iamsaul.co.uk>",
+  "license": "MIT",
+  "main": "index.cjs.js",
+  "files": [
+    "action.yml",
+    "index.cjs.js",
+    "index.cjs.js.map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/saulhardman/github-actions.git",
+    "directory": "packages/update-github-secret"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js"
+  }
+}
