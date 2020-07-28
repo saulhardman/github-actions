@@ -1,0 +1,24 @@
+{
+  "name": "refresh-instagram-access-token",
+  "version": "0.0.0",
+  "description": "A GitHub Action to refresh an Instagram access token",
+  "author": "Saul Hardman <hello@iamsaul.co.uk>",
+  "license": "MIT",
+  "main": "index.cjs.js",
+  "files": [
+    "action.yml",
+    "index.cjs.js",
+    "index.cjs.js.map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/saulhardman/github-actions.git",
+    "directory": "packages/refresh-instagram-access-token"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js"
+  }
+}

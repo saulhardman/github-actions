@@ -1,0 +1,15 @@
+name: Update GitHub Secret
+description: Updates (or creates) a GitHub secret
+inputs:
+  secret_name:
+    description: The name of the GitHub secret
+    required: true
+  secret_value:
+    description: The value to assign to the GitHub secret
+    required: true
+  access_token:
+    description: 'Personal Access Token with the `repo` scope'
+    required: true
+runs:
+  using: node12
+  main: index.cjs.js
