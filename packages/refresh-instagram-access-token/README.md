@@ -20,12 +20,12 @@ The refreshed Instagram access token.
 ```yml
 - name: Refresh Instagram Access Token
   id: instagram
-  uses: ./node_modules/refresh-instagram-access-token
+  uses: ./node_module/@saulhardmans/refresh-instagram-access-token
   with:
     access_token: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
 
 - name: Update GitHub Secret
-  uses: ./node_modules/update-github-secret
+  uses: ./node_module/@saulhardmans/update-github-secret
   with:
     secret_name: INSTAGRAM_ACCESS_TOKEN
     secret_value: ${{ steps.instagram.output.access_token }}

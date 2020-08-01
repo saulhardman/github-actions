@@ -22,12 +22,12 @@ This action updates (or creates) a GitHub secret based on input values of
 ```yml
 - name: Refresh Instagram Access Token
   id: instagram
-  uses: ./node_modules/refresh-instagram-access-token
+  uses: ./node_modules/@saulhardman/refresh-instagram-access-token
   with:
     access_token: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
 
 - name: Update GitHub Secret
-  uses: ./node_modules/update-github-secret
+  uses: ./node_modules/@saulhardman/update-github-secret
   with:
     secret_name: INSTAGRAM_ACCESS_TOKEN
     secret_value: ${{ steps.instagram.output.access_token }}
