@@ -19,6 +19,9 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js"
+    "build": "ncc build index.js"
+  },
+  "devDependencies": {
+    "axios": "^0.19.2"
   }
 }

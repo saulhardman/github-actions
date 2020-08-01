@@ -25,20 +25,20 @@ const handleAxiosError = (error) => {
 
 (async () => {
   try {
-    const ACCESS_TOKEN = core.getInput('access_token', { required: true });
+    const accessToken = core.getInput('access_token', { required: true });
 
     core.info('Requesting new access token.');
 
     const {
-      data: { access_token: accessToken },
+      data: { access_token: refreshedAccessToken },
     } = await axios.get(INSTAGRAM_REFRESH_ACCESS_TOKEN_URL, {
       params: {
-        access_token: ACCESS_TOKEN,
+        access_token: accessToken,
         grant_type: 'ig_refresh_token',
       },
     });
 
-    core.setOutput('access_token', accessToken);
+    core.setOutput('access_token', refreshedAccessToken);
   } catch (error) {
     core.setFailed(handleAxiosError(error));
   }

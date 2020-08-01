@@ -9,4 +9,4 @@ outputs:
     description: The refreshed Instagram access token
 runs:
   using: node12
-  main: index.cjs.js
+  main: dist/index.js

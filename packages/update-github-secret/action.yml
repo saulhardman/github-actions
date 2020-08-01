@@ -10,6 +10,12 @@ inputs:
   access_token:
     description: 'Personal Access Token with the `repo` scope'
     required: true
+  repo:
+    description: The name of the repository to which the secret belongs
+    required: true
+  owner:
+    description: The owner of the repository to which the secret belongs
+    required: true
 runs:
   using: node12
-  main: index.cjs.js
+  main: dist/index.js

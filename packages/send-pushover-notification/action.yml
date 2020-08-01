@@ -44,4 +44,4 @@ inputs:
     required: false
 runs:
   using: node12
-  main: index.cjs.js
+  main: dist/index.js
