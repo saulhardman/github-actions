@@ -38,6 +38,8 @@ const handleAxiosError = (error) => {
       },
     });
 
+    core.info('New access token received: ', typeof refreshedAccessToken);
+
     core.setOutput('access_token', refreshedAccessToken);
   } catch (error) {
     core.setFailed(handleAxiosError(error));
