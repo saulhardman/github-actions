@@ -15,7 +15,9 @@
     "prettier": "prettier '**/*.{js,yml,md}'",
     "eslint": "eslint '**/*.js'",
     "lint": "yarn prettier --check && yarn eslint --quiet",
-    "lint:fix": "yarn prettier --write && yarn eslint --quiet"
+    "lint:fix": "yarn prettier --write && yarn eslint --quiet",
+    "build": "lerna run build",
+    "release": "yarn lint && yarn build && lerna publish --conventional-commits"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
