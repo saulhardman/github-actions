@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/saulhardman/github-actions/compare/@saulhardman/update-github-secret@0.1.2...@saulhardman/update-github-secret@0.1.3) (2020-08-01)
+
+
+### Bug Fixes
+
+* include `dist/index.js` ([141e9c2](https://github.com/saulhardman/github-actions/commit/141e9c2e82ffc7a50e3765151235967cc10a1ca3))
+
+
+
+
+
 ## [0.1.2](https://github.com/saulhardman/github-actions/compare/@saulhardman/update-github-secret@0.1.1...@saulhardman/update-github-secret@0.1.2) (2020-08-01)
 
 
