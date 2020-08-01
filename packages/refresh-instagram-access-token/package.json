@@ -4,11 +4,10 @@
   "description": "A GitHub Action to refresh an Instagram access token",
   "author": "Saul Hardman <hello@iamsaul.co.uk>",
   "license": "MIT",
-  "main": "index.cjs.js",
+  "main": "dist/index.js",
   "files": [
     "action.yml",
-    "index.cjs.js",
-    "index.cjs.js.map"
+    "dist/index.js"
   ],
   "repository": {
     "type": "git",
