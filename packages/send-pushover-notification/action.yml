@@ -1,0 +1,47 @@
+name: Send Pushover Notification
+description: Send a Pushover notification to a given user
+inputs:
+  token:
+    description: Your application's API token
+    required: true
+  user:
+    description: Your user token
+    required: true
+  message:
+    description: Your message
+    required: true
+  device:
+    description:
+      Your user's device name to send the message directly to that device,
+      rather than all of the user's devices (multiple devices may be separated
+      by a comma)
+    required: false
+  title:
+    description: Your message's title, otherwise your app's name is used
+    required: false
+  url:
+    description: A supplementary URL to show with your message
+    required: false
+  url_title:
+    description:
+      A title for your supplementary URL, otherwise just the URL is shown
+    required: false
+  priority:
+    description:
+      Send as -2 to generate no notification/alert, -1 to always send as a quiet
+      notification, 1 to display as high-priority and bypass the user's quiet
+      hours, or 2 to also require confirmation from the user
+    required: false
+  sound:
+    description:
+      The name of one of the sounds supported by device clients to override the
+      user's default sound choice
+    required: false
+  timestamp:
+    description:
+      A Unix timestamp of your message's date and time to display to the user,
+      rather than the time your message is received by our API
+    required: false
+runs:
+  using: node12
+  main: index.cjs.js

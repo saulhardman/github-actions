@@ -1,0 +1,24 @@
+{
+  "name": "@saulhardman/send-pushover-notification",
+  "version": "0.0.0",
+  "description": "A GitHub Action to send a Pushover notification to a user",
+  "author": "Saul Hardman <hello@iamsaul.co.uk>",
+  "license": "MIT",
+  "main": "index.cjs.js",
+  "files": [
+    "action.yml",
+    "index.cjs.js",
+    "index.cjs.js.map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/saulhardman/github-actions.git",
+    "directory": "packages/send-pushover-notification"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js"
+  }
+}
