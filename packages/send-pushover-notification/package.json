@@ -1,6 +1,6 @@
 {
   "name": "@saulhardman/send-pushover-notification",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A GitHub Action to send a Pushover notification to a user",
   "author": "Saul Hardman <hello@iamsaul.co.uk>",
   "license": "MIT",
