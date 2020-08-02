@@ -38,7 +38,9 @@ const handleAxiosError = (error) => {
       },
     });
 
-    core.info('New access token received: ', typeof refreshedAccessToken);
+    core.info('New access token received.');
+
+    core.setSecret(refreshedAccessToken);
 
     core.setOutput('access_token', refreshedAccessToken);
   } catch (error) {
