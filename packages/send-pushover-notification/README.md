@@ -57,9 +57,13 @@ than the time your message is received by our API
   with:
     token: ${{ secrets.PUSHOVER_APP_TOKEN }}
     user: ${{ secrets.PUSHOVER_USER_KEY }}
-    title: ${{ github.workflow }} (Success)
+    title:
+      ✅ ${{ github.event.repository.name }} ${{ github.workflow }} (Success)
     url: ${{ env.DEPLOY_URL }}
     url_title: Deploy URL
+    message:
+      "The '${{ github.workflow }}' workflow on the '${{ github.repository }}'
+      repository succeeded"
 
 - name: Send Pushover Notification (Failure)
   if: failure()
@@ -67,10 +71,14 @@ than the time your message is received by our API
   with:
     token: ${{ secrets.PUSHOVER_APP_TOKEN }}
     user: ${{ secrets.PUSHOVER_USER_KEY }}
-    title: ${{ github.workflow }} (Failure)
+    title:
+      💥 ${{ github.event.repository.name }} ${{ github.workflow }} (Failure)
     url:
       ${{
       format('https://github.com/{0}/actions/runs/{1}?check_suite_focus=true',
       github.repository, github.run_id) }}
     url_title: GitHub Action
+    message:
+      "The '${{ github.workflow }}' workflow on the '${{ github.repository }}'
+      repository failed"
 ```
