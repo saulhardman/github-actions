@@ -30,6 +30,6 @@ This action updates (or creates) a GitHub secret based on input values of
   uses: ./node_modules/@saulhardman/update-github-secret
   with:
     secret_name: INSTAGRAM_ACCESS_TOKEN
-    secret_value: ${{ steps.instagram.output.access_token }}
+    secret_value: ${{ steps.instagram.outputs.access_token }}
     access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 ```

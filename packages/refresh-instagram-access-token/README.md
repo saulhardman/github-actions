@@ -28,6 +28,6 @@ The refreshed Instagram access token.
   uses: ./node_module/@saulhardmans/update-github-secret
   with:
     secret_name: INSTAGRAM_ACCESS_TOKEN
-    secret_value: ${{ steps.instagram.output.access_token }}
+    secret_value: ${{ steps.instagram.outputs.access_token }}
     access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 ```
