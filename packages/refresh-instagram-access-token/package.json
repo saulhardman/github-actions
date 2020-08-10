@@ -1,6 +1,6 @@
 {
   "name": "@saulhardman/refresh-instagram-access-token",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "A GitHub Action to refresh an Instagram access token",
   "author": "Saul Hardman <hello@iamsaul.co.uk>",
   "license": "MIT",
