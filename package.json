@@ -16,11 +16,10 @@
     "eslint": "eslint '**/*.js'",
     "lint": "yarn prettier --check && yarn eslint --quiet",
     "lint:fix": "yarn prettier --write && yarn eslint --quiet",
-    "test": "yarn lint && yarn test:packages",
-    "test:watch": "jest packages --watch",
-    "test:packages": "jest packages",
+    "test": "jest packages",
+    "test:watch": "yarn test --watch",
     "build": "lerna run build",
-    "release": "yarn test && yarn build && lerna publish"
+    "release": "yarn lint && yarn test && yarn build && lerna publish"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

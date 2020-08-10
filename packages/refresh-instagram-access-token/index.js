@@ -1,5 +1,5 @@
-const core = require('@actions/core');
-const axios = require('axios');
+import * as core from '@actions/core';
+import axios from 'axios';
 
 const INSTAGRAM_REFRESH_ACCESS_TOKEN_URL =
   'https://graph.instagram.com/refresh_access_token';
@@ -20,14 +20,14 @@ const handleAxiosError = (error) => {
     return 'No response received';
   }
 
-  return `Unknown error: ${error.message}`;
+  return error.message;
 };
 
-(async () => {
+const run = async () => {
   try {
     const accessToken = core.getInput('access_token', { required: true });
 
-    core.info('Requesting new access token.');
+    core.debug('Requesting new access token.');
 
     const {
       data: { access_token: refreshedAccessToken },
@@ -38,7 +38,7 @@ const handleAxiosError = (error) => {
       },
     });
 
-    core.info('New access token received.');
+    core.debug('New access token received.');
 
     core.setSecret(refreshedAccessToken);
 
@@ -46,4 +46,10 @@ const handleAxiosError = (error) => {
   } catch (error) {
     core.setFailed(handleAxiosError(error));
   }
-})();
+};
+
+if (process.env.NODE_ENV !== 'test') {
+  run();
+}
+
+export default run;
