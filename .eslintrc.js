@@ -8,7 +8,9 @@ module.exports = {
     es6: true,
     node: true,
     browser: true,
+    'jest/globals': true,
   },
+  plugins: ['jest'],
   extends: [
     'eslint:recommended',
     'standard',
