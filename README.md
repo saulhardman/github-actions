@@ -21,8 +21,8 @@ The actions are installed from the GitHub Package Repository via
 [Yarn](https://yarnpkg.com/) or [`npm`](https://www.npmjs.com/) – more details
 are available in the individual package `README`s.
 
-| Action                                                                | Description                                                            |
-| --------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| [`refresh-instagram-action`](packages/refresh-instagram-token/)      | A GitHub Action to create or update a GitHub repository secret         |
-| [`update-github-secret`](packages/update-github-secret/)             | A GitHub Action to refresh an Instagram Basic Display API access token |
-| [`send-pushover-notification`](packages/send-pushover-notification/) | A GitHub Action to send a Pushover notification to a user              |
+| Action                                                                       | Description                                                            |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`refresh-instagram-access-token`](packages/refresh-instagram-access-token/) | A GitHub Action to create or update a GitHub repository secret         |
+| [`update-github-secret`](packages/update-github-secret/)                     | A GitHub Action to refresh an Instagram Basic Display API access token |
+| [`send-pushover-notification`](packages/send-pushover-notification/)         | A GitHub Action to send a Pushover notification to a user              |
