@@ -18,8 +18,8 @@ as a separate repository and make it available via the marketplace.
 ## Usage
 
 The actions are installed from the GitHub Package Repository via
-[Yarn](https://yarnpkg.com/) or [`npm`](https://www.npmjs.com/) – more details
-are available in the individual package `README`s.
+[Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) – more details are
+available in the individual package `README`s.
 
 | Action                                                                       | Description                                                            |
 | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
