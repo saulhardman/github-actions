@@ -18,7 +18,8 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
-    "build": "ncc build index.js"
+    "build": "ncc build index.js",
+    "test": "act -j test --secret-file .env"
   },
   "devDependencies": {
     "@actions/core": "^1.2.4",

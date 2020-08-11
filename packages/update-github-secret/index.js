@@ -1,8 +1,8 @@
-const core = require('@actions/core');
-const { Octokit } = require('@octokit/core');
-const sodium = require('tweetsodium');
+import * as core from '@actions/core';
+import { Octokit } from '@octokit/core';
+import sodium from 'tweetsodium';
 
-(async () => {
+const run = async () => {
   try {
     const secretName = core.getInput('secret_name', { required: true });
     const secretValue = core.getInput('secret_value', { required: true });
@@ -33,9 +33,9 @@ const sodium = require('tweetsodium');
     // Base64 the encrypted secret
     const encryptedValue = Buffer.from(encryptedBytes).toString('base64');
 
-    core.info(`Updating/creating secret: ${secretName}`);
+    core.info(`\`PUT\`ing secret: ${secretName}`);
 
-    await octokit.request(
+    const { status } = await octokit.request(
       'PUT /repos/{owner}/{repo}/actions/secrets/{secret_name}',
       {
         owner,
@@ -45,7 +45,19 @@ const sodium = require('tweetsodium');
         key_id: publicKeyId,
       },
     );
+
+    if (status === 201) {
+      core.info('Secret created.');
+    } else if (status === 204) {
+      core.info('Secret updated.');
+    }
   } catch (error) {
-    core.setFailed(`Action failed: ${error}`);
+    core.setFailed(error);
   }
-})();
+};
+
+if (process.env.NODE_ENV !== 'test') {
+  run();
+}
+
+export default run;
