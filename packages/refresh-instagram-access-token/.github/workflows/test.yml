@@ -14,7 +14,6 @@ jobs:
           node-version: 12
 
       - name: Refresh Instagram Access Token
-        id: instagram
         uses: ./
         with:
           access_token: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}

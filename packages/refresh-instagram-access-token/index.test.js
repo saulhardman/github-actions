@@ -46,17 +46,27 @@ const server = setupServer(
   ),
 );
 
-beforeAll(() => server.listen());
+beforeAll(() => {
+  server.listen();
+
+  jest.spyOn(core, 'error').mockImplementation(jest.fn());
+  jest.spyOn(core, 'warning').mockImplementation(jest.fn());
+  jest.spyOn(core, 'info').mockImplementation(jest.fn());
+  jest.spyOn(core, 'debug').mockImplementation(jest.fn());
+});
+
 beforeEach(() => {
   jest.resetModules();
 
   setInputs();
 });
+
 afterEach(() => {
   server.resetHandlers();
 
   unsetInputs();
 });
+
 afterAll(() => server.close());
 
 describe(name, () => {
