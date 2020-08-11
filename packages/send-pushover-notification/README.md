@@ -2,6 +2,26 @@
 
 This action allows you to send a Pushover notification to a given user.
 
+## Installation
+
+Add the following to your `.npmrc`:
+
+```shell
+@saulhardman:registry=https://npm.pkg.github.com
+```
+
+Using npm:
+
+```shell
+> npm install --save-dev @saulhardman/send-pushover-notification
+```
+
+Using Yarn:
+
+```shell
+> yarn add --dev @saulhardman/send-pushover-notification
+```
+
 ## Inputs
 
 ### `token`

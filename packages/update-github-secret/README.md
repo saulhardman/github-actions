@@ -3,6 +3,26 @@
 This action updates (or creates) a GitHub secret based on input values of
 `secret_name` and `secret_value`.
 
+## Installation
+
+Add the following to your `.npmrc`:
+
+```shell
+@saulhardman:registry=https://npm.pkg.github.com
+```
+
+Using npm:
+
+```shell
+> npm install --save-dev @saulhardman/update-github-secret
+```
+
+Using Yarn:
+
+```shell
+> yarn add --dev @saulhardman/update-github-secret
+```
+
 ## Inputs
 
 ### `secret_name`
