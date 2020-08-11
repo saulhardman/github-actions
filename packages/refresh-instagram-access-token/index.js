@@ -27,7 +27,7 @@ const run = async () => {
   try {
     const accessToken = core.getInput('access_token', { required: true });
 
-    core.debug('Requesting new access token.');
+    core.info('Requesting new access token.');
 
     const {
       data: { access_token: refreshedAccessToken },
@@ -38,7 +38,7 @@ const run = async () => {
       },
     });
 
-    core.debug('New access token received.');
+    core.info('New access token received.');
 
     core.setSecret(refreshedAccessToken);
 
