@@ -1,6 +1,6 @@
 {
   "name": "@saulhardman/update-github-secret",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A GitHub Action to create or update a GitHub repository secret",
   "author": "Saul Hardman <hello@iamsaul.co.uk>",
   "license": "MIT",
