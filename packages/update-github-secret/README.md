@@ -60,4 +60,6 @@ Using Yarn:
     secret_name: INSTAGRAM_ACCESS_TOKEN
     secret_value: ${{ steps.instagram.outputs.access_token }}
     access_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+    repo: my-personal-website
+    owner: saulhardman
 ```
