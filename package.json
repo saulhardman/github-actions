@@ -1,6 +1,6 @@
 {
   "name": "github-actions",
-  "description": "A mono-repo of private GitHub Actions",
+  "description": "A collection of pre-release GitHub Actions",
   "main": "index.js",
   "repository": {
     "type": "git",
