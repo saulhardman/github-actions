@@ -37,6 +37,14 @@ Using Yarn:
 
 **Required** Personal Access Token with the `repo` scope.
 
+### `repo`
+
+**Required** The name of the repository to which the secret belongs
+
+### `owner`
+
+**Required** The owner of the repository to which the secret belongs
+
 ## Example Usage
 
 ```yml
