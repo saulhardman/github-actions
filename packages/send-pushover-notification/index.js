@@ -1,7 +1,8 @@
-const core = require('@actions/core');
-const axios = require('axios');
+import core from '@actions/core';
+import axios from 'axios';
 
 const PUSHOVER_API_URL = 'https://api.pushover.net/1/messages.json';
+
 const PUSHOVER_PARAMETERS = [
   { name: 'token', required: true },
   { name: 'user', required: true },
@@ -31,12 +32,12 @@ const handleAxiosError = (error) => {
     return 'No response received';
   }
 
-  return `Unknown error: ${error.message}`;
+  return error.message;
 };
 
-(async () => {
+const run = async () => {
   try {
-    core.debug('Parsing GitHub Action inputs.');
+    core.info('Parsing inputs.');
 
     const data = PUSHOVER_PARAMETERS.reduce(
       (acc, { name, required = false }) => {
@@ -55,12 +56,18 @@ const handleAxiosError = (error) => {
       {},
     );
 
-    core.debug('Initiating request to the Pushover API.');
+    core.info('Initiating request to the Pushover API.');
 
     await axios.post(PUSHOVER_API_URL, data);
 
-    core.debug('Request successful.');
+    core.info('Request successful.');
   } catch (error) {
     core.setFailed(handleAxiosError(error));
   }
-})();
+};
+
+if (process.env.NODE_ENV !== 'test') {
+  run();
+}
+
+export default run;
