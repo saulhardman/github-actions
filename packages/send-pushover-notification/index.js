@@ -1,4 +1,4 @@
-import core from '@actions/core';
+import * as core from '@actions/core';
 import axios from 'axios';
 
 const PUSHOVER_API_URL = 'https://api.pushover.net/1/messages.json';
