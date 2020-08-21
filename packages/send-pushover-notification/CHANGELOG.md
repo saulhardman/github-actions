@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.6](https://github.com/saulhardman/github-actions/compare/@saulhardman/send-pushover-notification@0.1.5...@saulhardman/send-pushover-notification@0.1.6) (2020-08-21)
+
+
+### Bug Fixes
+
+* actions core import statement ([7ce139b](https://github.com/saulhardman/github-actions/commit/7ce139b17080c1a61fe600f64e13040ebac73b89))
+
+
+
+
+
 ## [0.1.5](https://github.com/saulhardman/github-actions/compare/@saulhardman/send-pushover-notification@0.1.4...@saulhardman/send-pushover-notification@0.1.5) (2020-08-12)
 
 **Note:** Version bump only for package @saulhardman/send-pushover-notification
